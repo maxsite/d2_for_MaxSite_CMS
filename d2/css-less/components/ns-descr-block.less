@@ -1,0 +1,79 @@
+// MaxSite CMS 
+// Copyright http://max-3000.com/
+
+// компонент 
+div.ns-descr-block {
+	
+	> div.wrap {
+		.bg(#f4f4f4);
+		width: 100%;
+		margin: 0 auto;
+		max-width: @CONTENT_WIDTH;
+		padding: 25px 0 20px 0;
+	}
+	
+	// стили для разных main-шаблонов в отдельном файле 
+	@import url('components/_main-width.less');
+	
+	div.r1 {
+		.column_width(4, 9, 3%);
+		
+		div.name_site {
+			.f > .georgia;
+			.f > .size(35px);
+			.f > .i;
+			
+			margin: 0 0 0 35px;
+			line-height: 1em;
+			
+	
+			a {
+				.f > .underline(none);
+			}
+		
+		}
+
+		div.description_site {
+			margin: 5px 0 0 35px;
+			color: #888;
+			.f > .small_caps;
+			.f > .size(15px);
+		}
+		
+	}
+
+	div.r2 {
+		.column_width(5, 9, 3%);
+	}
+	
+	
+	@media @MOBILE 
+	{
+		div.r1 {
+			width: 100%;
+			float: none;
+			padding: 10px;
+			margin: 0;
+			
+			div.name_site {
+				margin: 0;
+			}
+			
+			div.description_site {
+				margin: 10px 0 0 0;
+			}
+		}
+		
+		div.r2 {
+			width: 100%;
+			float: none;
+			margin: 0;
+		}
+
+	}
+	
+	// дизайн sky — включается как css-профиль
+	body.design-sky & {
+
+	}
+}
